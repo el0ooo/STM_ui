@@ -17,27 +17,27 @@
 }
 
 /*----------------------------Mobil First----------------------------*/
+body{
+    font-family: "stm_font", sans-serif;
+}
+
+header{
+    position:fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--couleur-nav);
+    height: 12vh;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
 
 /*----------------------------Ecran plus grand que 1000px----------------------------*/
 @media screen and (min-width: 1000px) {
-    body{
-        font-family: "stm_font", sans-serif;
-    }
-    header{
-        position:fixed;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--couleur-nav);
-        height: 12vh;
-        width: 100vw;
-        right: 0;
-        top: 0;
-        z-index: 100;
-    }
-
     .logo{
         background-image: url("../images/logoSTM.png");
         background-size: 30%;
