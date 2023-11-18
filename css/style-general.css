@@ -14,9 +14,16 @@
     --couleur-arriere-plan : #ffffff;
     --couleur-nav : rgb(58, 58, 58);
     --couleur-jaune : yellow;
+    --couleur-bleu-fonce : #1353be;
+    --couleur-bleu-pale: #00aeef;
+    --couleur-vert: #00b229;
+    --couleur-orange: #ff7600;
+}
+/*----------------------------Mobil First----------------------------*/
+html{
+    scroll-behavior: smooth;
 }
 
-/*----------------------------Mobil First----------------------------*/
 body{
     font-family: "stm_font", sans-serif;
 }
@@ -34,6 +41,41 @@ header{
     left: 0;
     top: 0;
     z-index: 100;
+}
+
+footer{
+    background-color: var(--couleur-nav);
+    color: var(--couleur-arriere-plan);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+footer div{
+    margin: 2vh;
+}
+
+footer div h2{
+    margin-top: 0;
+    margin-left: 0;
+    margin-bottom: 1vh;
+}
+
+footer div p{
+    margin-left: 2vw;
+}
+
+.icones{
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.fa-brands{
+    width: 20px;
+    color: white;
+    margin: 0;
 }
 
 /*----------------------------Ecran plus grand que 1000px----------------------------*/
