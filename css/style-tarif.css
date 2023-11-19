@@ -2,14 +2,40 @@ main{
     margin-top: 15vh;
 }
 
-h1, h2{
+main h1, main h2{
     margin-top: 3vh;
 }
 
-p{
-    margin-left: 15vw;
-    width: 60vw;
-    margin-bottom: 5vh;
+main p{
+    width: 40vw;
+    margin-bottom: 3vh;
+}
+
+main nav{
+    position: relative;
+    width: fit-content;
+}
+
+main nav ul li a{
+    color: var(--couleur-nav);
+    font-size: 16px;
+    transition: font-size 0.3s ease-in;
+    opacity: 80%;
+    margin: 1vh;
+}
+
+main nav ul li a:hover{
+    font-size: 20px;
+}
+
+main nav ul li a::after{
+    border: none;
+    border-radius: 0px;
+}
+
+main nav ul li a:hover::after{
+    border: none;
+    border-radius: 0px;
 }
 
 .tableau{
