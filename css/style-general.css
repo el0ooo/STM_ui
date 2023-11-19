@@ -48,8 +48,9 @@ footer{
     color: var(--couleur-arriere-plan);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
 }
 
 footer div{
@@ -66,17 +67,6 @@ footer div p{
     margin-left: 2vw;
 }
 
-.icones{
-    width: fit-content;
-    display: flex;
-    flex-direction: row;
-}
-
-.fa-brands{
-    width: 20px;
-    color: white;
-    margin: 0;
-}
 
 /*----------------------------Ecran plus grand que 1000px----------------------------*/
 @media screen and (min-width: 1000px) {
