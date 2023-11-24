@@ -11,6 +11,7 @@ main p{
     margin-bottom: 3vh;
 }
 
+/* nav selection zone */
 main nav{
     position: relative;
     width: fit-content;
@@ -21,7 +22,7 @@ main nav ul li a{
     font-size: 16px;
     transition: font-size 0.3s ease-in;
     opacity: 80%;
-    margin: 1vh;
+    margin: 3vh;
 }
 
 main nav ul li a:hover{
@@ -38,6 +39,7 @@ main nav ul li a:hover::after{
     border-radius: 0px;
 }
 
+/* tableau des tarifs */
 .tableau{
     display: flex;
     flex-direction: column;
@@ -51,6 +53,10 @@ main nav ul li a:hover::after{
 table{
     border: 3px solid var(--couleur-nav);
     border-radius: 15px;
+}
+
+table:last-of-type{
+    margin-bottom: 3vh;
 }
 
 th, td{

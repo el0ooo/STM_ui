@@ -9,14 +9,15 @@ h2{
 .conteneurMaps{
     margin-top: 15vh;
     width: 100vw;
-    height: 80vh;
-    overflow-x: scroll;
+    height: 70vh;
+    overflow: scroll;
 }
 
 .map{
-    width: 100vw;
+    width: 120vw;
     height: 100vh;
     background-image: url("../images/mapMetroMTL.png");
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: 130%;
     position: relative;
@@ -34,26 +35,33 @@ h2{
 }
 
 .station:hover{
-    transform: scale(1.8);
+    transform: scale(1.5);
 }
 
 .station:nth-of-type(1){
-    top: 8.5vh;
-    left: 23vw;
+    top: 10%;
+    left: 10%
 }
 
-.station::after{
-    content: "11111";
-    top: -10vh;
+.station p{
+    display: block;
+    position: absolute;
+    top: -5vh;
+    left: -6vw;
+    font-size: 10px;
+    padding: 0.5vh;
+    padding-left: 1vh;
     width: 0vw;
+    border: 2px solid var(--couleur-bleu-pale);
+    border-radius: 15px;
+    background-color: var(--couleur-arriere-plan);
     opacity: 0;
-    transition: width 0.3s;
+    transition: opacity 0.3s, width 0.3s;
 }
 
-.station::after:hover{
-    content: "test";
-    width: 10vw;
+.station:hover > p{
     opacity: 1;
+    width: fit-content;
 }
 /*----------------------------Section des informations suplémentaires----------------------------*/
 .info-sup{
@@ -102,6 +110,21 @@ h2{
 }
 
 @media screen and (min-width: 1000px) {
+    .conteneurMaps{
+        margin-top: 12vh;
+        height: 80vh;
+    }
+
+    .map{
+        background-size: 90%;
+        height: 200vh;
+        width: 120vw;
+    }
+
+    h2{
+        margin-top: 2vh;
+    }
+
     .une-info p{
         width: 20vw;
     }
@@ -122,6 +145,8 @@ h2{
         scrollbar-width: 0px;
         overflow-x: auto;
     }
+
+
 }
 
 
