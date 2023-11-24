@@ -13,11 +13,27 @@
 :root{
     --couleur-arriere-plan : #ffffff;
     --couleur-nav : rgb(58, 58, 58);
-    --couleur-jaune : yellow;
+    --couleur-jaune : #ffe400;
     --couleur-bleu-fonce : #1353be;
     --couleur-bleu-pale: #00aeef;
     --couleur-vert: #00b229;
     --couleur-orange: #ff7600;
+}
+/*----------------------------Scroll bar----------------------------*/
+::-webkit-scrollbar{
+    width: 1vw;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--couleur-arriere-plan);
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--couleur-nav);
+}
+
+::-webkit-scrollbar-corner{
+    background-color: rgba(22, 21, 21, 0);
 }
 /*----------------------------Mobil First----------------------------*/
 html{
