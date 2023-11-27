@@ -1,20 +1,35 @@
+body{
+    overflow-x: hidden;
+}
+
 main{
     margin-top: 15vh;
 }
 
 main h1, main h2{
     margin-top: 3vh;
+    margin-left: 3vw;
 }
 
 main p{
-    width: 40vw;
+    width: 85vw;
+    margin-left: 3vh;
     margin-bottom: 3vh;
 }
 
 /* nav selection zone */
 main nav{
     position: relative;
-    width: fit-content;
+    width:70vw;
+    margin: 0 auto;
+
+}
+
+main nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    list-style-type: none;
 }
 
 main nav ul li a{
@@ -22,7 +37,7 @@ main nav ul li a{
     font-size: 16px;
     transition: font-size 0.3s ease-in;
     opacity: 80%;
-    margin: 3vh;
+    text-decoration: none;
 }
 
 main nav ul li a:hover{
@@ -50,9 +65,15 @@ main nav ul li a:hover::after{
     margin: 0 auto;
 }
 
+table:nth-of-type(1){
+    width: 80vw;
+}
+
 table{
+    margin: 0 auto;
     border: 3px solid var(--couleur-nav);
     border-radius: 15px;
+    width: 80vw;
 }
 
 table:last-of-type{
@@ -69,4 +90,15 @@ th, td{
 .avec-carte{
     background-color: var(--couleur-bleu-pale);
     border-radius: 0px 15px 0px 0px;
+}
+
+@media  screen and (min-width: 1000px) {
+    main p{
+        width: 80vw;
+        margin-bottom: 3vh;
+    }
+
+    main nav{
+        margin: 0 auto;
+    }
 }
