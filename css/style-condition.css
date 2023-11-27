@@ -1,0 +1,28 @@
+main{
+    margin-top: 15vh;
+}
+
+.info-para{
+    margin-left: 5vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    width: 80vw;
+    position: relative;
+}
+
+p{
+    margin-top: 2vh;
+}
+
+.fa-solid{
+    position: absolute;
+    font-size: 30px;
+    left: 95%;
+    top: -1%;
+    color: var(--couleur-bleu-fonce);
+}
+
+.fa-arrow-left{
+    font-size: 50px;
+    color: grey;
+}
