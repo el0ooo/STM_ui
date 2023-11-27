@@ -1,0 +1,64 @@
+body{
+    overflow-x: hidden;
+}
+main{
+    margin-top: 14vh;
+}
+
+h1, h2, h3, h4{
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+h1{
+   margin-left: 5vw;
+}
+
+.image-chauffeur{
+    background-image: url(../images/stm_photochauffeur_1024x512.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 150%;
+    width: 100vw;
+    height: 50vh;
+}
+
+.block-texte{
+    margin: 0 auto;
+    width: 80vw;
+    margin-bottom: 4vh;
+}
+
+.lien{
+    color: var(--couleur-bleu-pale);
+    transition: color 0.5s ;
+}
+
+.texte-couleur-verte{
+    color: var(--couleur-vert);
+}
+
+#message{
+    font-size: 22px;
+    color: var(--couleur-vert);
+    margin-top: 2vh;
+    text-align: center;
+}
+/*----------------------------Pour les écrans de 1000px et plus----------------------------*/
+@media screen and (min-width: 1000px) {
+    .image-chauffeur{
+        background-size: 100%;
+        border-radius: 15px;
+        width: 80vw;
+        height: 60vh;
+        margin: 0 auto;
+    }
+
+    main a::after{
+        display: none;
+    }
+
+    .lien:hover{
+        color: var(--couleur-bleu-fonce);
+    }
+}
