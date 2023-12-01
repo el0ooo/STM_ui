@@ -25,7 +25,7 @@
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: var(--couleur-arriere-plan);
+    background-color: rgba(193, 193, 193, 0.337);
 }
 
 ::-webkit-scrollbar-thumb:hover{
@@ -121,7 +121,7 @@ footer div p{
         position:fixed;
         right: 0;
         width: 60vw;
-        height: 8vh;
+        height: 10vh;
         padding: 1vw;
         margin-left: 2vw;
         margin-right: 2vw;

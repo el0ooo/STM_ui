@@ -12,17 +12,18 @@ h2{
 .conteneurMaps{
     margin-top: 15vh;
     width: 100vw;
-    height: 70vh;
+    height: 65vh;
     overflow: scroll;
 }
 
 .map{
-    width: 120vw;
-    height: 100vh;
+    width: 1000px;
+    height: 1000px;
     background-image: url("../images/mapMetroMTL.png");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 130%;
+    background-size: 100%;
+    transform-origin: center;
     position: relative;
 }
 
@@ -33,17 +34,358 @@ h2{
     background-color: var(--couleur-arriere-plan);
     border: 1px solid var(--couleur-nav);
     border-radius: 30px;
-    transform: scale(1);
+    transform: scale(0.7);
     transition: transform 0.3s;
 }
 
 .station:hover{
     transform: scale(1.5);
+    z-index: 1000;
 }
 
+
+/* Ligne orange */
 .station:nth-of-type(1){
-    top: 10%;
-    left: 10%
+    top: 19.5%;
+    left: 18%;
+}
+
+.station:nth-of-type(2){
+    top: 19.2%;
+    left: 25.5%;
+}
+
+.station:nth-of-type(3){
+    top: 19.2%;
+    left: 32.7%;
+}
+
+.station:nth-of-type(4){
+    top: 23.5%;
+    left: 36%;
+}
+
+.station:nth-of-type(5){
+    top: 26.5%;
+    left: 38.3%;
+}
+
+.station:nth-of-type(6){
+    top: 30%;
+    left: 41%;
+}
+
+.station:nth-of-type(7){
+    top: 33.5%;
+    left: 44%;
+}
+
+.station:nth-of-type(8){
+    top: 36.8%;
+    left: 46.5%;
+}
+
+.station:nth-of-type(9){
+    top: 40.5%;
+    left: 49.5%;
+}
+
+.station:nth-of-type(10){
+    top: 43%;
+    left: 51.5%;
+}
+
+.station:nth-of-type(11){
+    top: 46%;
+    left: 54%;
+}
+
+.station:nth-of-type(12){
+    top: 48.5%;
+    left: 56%;
+}
+
+.station:nth-of-type(13){
+    top: 51.5%;
+    left: 58.3%;
+}
+
+.station:nth-of-type(14){
+    top: 53.5%;
+    left: 60%;
+}
+
+.station:nth-of-type(15){
+    top: 57%;
+    left: 62.5%;
+}
+
+.station:nth-of-type(16){
+    top: 59%;
+    left: 60%;
+}
+
+.station:nth-of-type(17){
+    top: 61.5%;
+    left: 57%;
+}
+
+.station:nth-of-type(18){
+    top: 65%;
+    left: 53%;
+}
+
+.station:nth-of-type(19){
+    top: 67.5%;
+    left: 50%;
+}
+
+.station:nth-of-type(20){
+    top: 70.5%;
+    left: 46%;
+}
+
+.station:nth-of-type(21){
+    top: 73%;
+    left: 42.5%;
+}
+
+.station:nth-of-type(22){
+    top: 73%;
+    left: 38.5%;
+}
+
+.station:nth-of-type(23){
+    top: 69.5%;
+    left: 35.5%;
+}
+
+.station:nth-of-type(24){
+    top: 66%;
+    left: 33%;
+}
+
+.station:nth-of-type(25){
+    top: 62%;
+    left: 30%;
+}
+
+.station:nth-of-type(26){
+    top: 60%;
+    left: 28.3%;
+}
+
+.station:nth-of-type(27){
+    top: 58%;
+    left: 26.7%;
+}
+
+.station:nth-of-type(28){
+    top: 56%;
+    left: 25%;
+}
+
+.station:nth-of-type(29){
+    top: 54%;
+    left: 23.5%;
+}
+
+.station:nth-of-type(30){
+    top: 52%;
+    left: 21.9%;
+}
+
+.station:nth-of-type(31){
+    top: 49%;
+    left: 19.7%;
+}
+
+/* ligne jaune */
+.station:nth-of-type(32){
+    top: 57%;
+    left: 68%;
+}
+
+.station:nth-of-type(33){
+    top: 54.5%;
+    left: 74%;
+}
+
+/* ligne bleu */
+.station:nth-of-type(34){
+    top: 30%;
+    left: 55%;
+}
+
+.station:nth-of-type(35){
+    top: 32.5%;
+    left: 52%;
+}
+
+.station:nth-of-type(36){
+    top: 35%;
+    left: 49%;
+}
+
+.station:nth-of-type(37){
+    top: 39%;
+    left: 44%;
+}
+
+.station:nth-of-type(38){
+    top: 41.5%;
+    left: 41%;
+}
+
+.station:nth-of-type(39){
+    top: 45%;
+    left: 41%;
+}
+
+.station:nth-of-type(40){
+    top: 48%;
+    left: 43.3%;
+}
+
+.station:nth-of-type(41){
+    top: 51.5%;
+    left: 43.3%;
+}
+
+.station:nth-of-type(42){
+    top: 54.3%;
+    left: 40%;
+}
+
+.station:nth-of-type(43){
+    top: 58%;
+    left: 35%;
+}
+
+/* ligne verte */
+.station:nth-of-type(44){
+    top: 28%;
+    left: 79%;
+}
+
+.station:nth-of-type(45){
+    top: 29.5%;
+    left: 77%;
+}
+
+.station:nth-of-type(46){
+    top: 31%;
+    left: 75%;
+}
+
+.station:nth-of-type(47){
+    top: 32.5%;
+    left: 73%;
+}
+
+.station:nth-of-type(48){
+    top: 34%;
+    left: 71%;
+}
+
+.station:nth-of-type(49){
+    top: 38%;
+    left: 73%;
+}
+
+.station:nth-of-type(50){
+    top: 40.5%;
+    left: 70%;
+}
+
+.station:nth-of-type(51){
+    top: 43%;
+    left: 67%;
+}
+
+.station:nth-of-type(52){
+    top: 45%;
+    left: 64.5%;
+}
+
+.station:nth-of-type(53){
+    top: 48.5%;
+    left: 66%;
+}
+
+.station:nth-of-type(54){
+    top: 50%;
+    left: 64%;
+}
+
+.station:nth-of-type(55){
+    top: 51.5%;
+    left: 62%;
+}
+
+.station:nth-of-type(56){
+    top: 56.5%;
+    left: 56%;
+}
+
+.station:nth-of-type(57){
+    top: 59.5%;
+    left: 52%;
+}
+
+.station:nth-of-type(58){
+    top: 62.5%;
+    left: 48%;
+}
+
+.station:nth-of-type(59){
+    top: 65.5%;
+    left: 44%;
+}
+
+.station:nth-of-type(60){
+    top: 67%;
+    left: 42%;
+}
+
+.station:nth-of-type(61){
+    top: 69%;
+    left: 39.5%;
+}
+
+.station:nth-of-type(62){
+    top: 76%;
+    left: 45%;
+}
+
+.station:nth-of-type(63){
+    top: 78%;
+    left: 46.7%;
+}
+
+.station:nth-of-type(64){
+    top: 81%;
+    left: 43.5%;
+}
+
+.station:nth-of-type(65){
+    top: 84%;
+    left: 40%;
+}
+
+.station:nth-of-type(66){
+    top: 81.5%;
+    left: 37.5%;
+}
+
+.station:nth-of-type(67){
+    top: 84%;
+    left: 34.5%;
+}
+
+.station:nth-of-type(68){
+    top: 86.5%;
+    left: 31.5%;
 }
 
 .station p{
@@ -120,9 +462,16 @@ h2{
     }
 
     .map{
-        background-size: 90%;
-        height: 200vh;
-        width: 120vw;
+
+        background-position: center center;
+        background-size: 100%;
+        height: 1600px;
+        width: 1600px;
+        transform-origin: center;
+    }
+
+    .station{
+        transform: scale(1);
     }
 
     h2{

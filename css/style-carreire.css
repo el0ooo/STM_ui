@@ -61,4 +61,8 @@ h1{
     .lien:hover{
         color: var(--couleur-bleu-fonce);
     }
+
+    .lien{
+        text-decoration: underline;
+    }
 }
