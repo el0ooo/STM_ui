@@ -1,11 +1,6 @@
-// faire jouer le son du metro lorsque l'utilisateur click sur le logo de la stm pour revenir a la page d'acceuil
-let sonSTM = new Audio("js/SonSTM.mp3");
+let sonSTM = new Audio("STM_ui/sons/SonSTM.mp3");
 
-let logoSTM = document.querySelector(".logo");
-logoSTM.addEventListener("click", JoueurSon);
-
-// FONCTIONNE PAS POUR LE MOMENT
-function JoueurSon(){
+function JouerSon(){
     sonSTM.play();
     console.log("test");
 }
