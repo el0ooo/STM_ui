@@ -1,3 +1,4 @@
+/* ------------ Conteneur general ------------*/
 body{
     overflow-x: hidden;
 }
@@ -18,6 +19,7 @@ p{
     margin-top: 2vh;
 }
 
+/* ------------ icones ------------ */
 .info-para .fa-solid{
     position: absolute;
     font-size: 45px;

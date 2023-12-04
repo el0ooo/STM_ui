@@ -1,3 +1,4 @@
+/* ------------ conteneurs générale */
 body{
     overflow-x: hidden;
 }
@@ -31,6 +32,7 @@ ul{
     margin-top: 1vh;
 }
 
+/* ------------ icones ------------ */
 a#fleche-retour::after{
     display: none;
 }

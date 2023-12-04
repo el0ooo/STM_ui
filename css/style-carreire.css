@@ -1,3 +1,4 @@
+/* ------------ Conteneur general ------------*/
 body{
     overflow-x: hidden;
 }
@@ -14,6 +15,7 @@ h1{
    margin-left: 5vw;
 }
 
+/* ------------ image ------------*/
 .image-chauffeur{
     background-image: url(../images/stm_photochauffeur_1024x512.jpg);
     background-position: center;
@@ -23,21 +25,26 @@ h1{
     height: 50vh;
 }
 
+/* ------------ texte ------------ */
+
 .block-texte{
     margin: 0 auto;
     width: 80vw;
     margin-bottom: 4vh;
 }
 
+/* ------------ hyperlien ------------ */
 .lien{
     color: var(--couleur-bleu-pale);
     transition: color 0.5s ;
 }
 
+/* ------------ changement de couleur de certain texte ------------*/
 .texte-couleur-verte{
     color: var(--couleur-vert);
 }
 
+/* ------------ Message d'encouragement ------------ */
 #message{
     font-size: 22px;
     color: var(--couleur-vert);
