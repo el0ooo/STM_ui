@@ -18,11 +18,8 @@ main p{
 }
 
 /* ------------ nav selection zone ------------ */
-main nav{
-    position: relative;
-    width:70vw;
-    margin: 0 auto;
-
+.nav-page-tarif{
+    display: none;
 }
 
 main nav ul{
@@ -65,15 +62,12 @@ main nav ul li a:hover::after{
     margin: 0 auto;
 }
 
-table:nth-of-type(1){
-    width: 80vw;
-}
-
 table{
     margin: 0 auto;
     border: 3px solid var(--couleur-nav);
     border-radius: 15px;
     width: 80vw;
+    min-width: 430px;
 }
 
 table:last-of-type{
@@ -92,13 +86,22 @@ th, td{
     border-radius: 0px 15px 0px 0px;
 }
 
+/* ------------------style pour les écran de 1000px et plus ----------------------------- */
 @media  screen and (min-width: 1000px) {
     main p{
         width: 80vw;
         margin-bottom: 3vh;
     }
 
-    main nav{
+
+    .nav-page-tarif{
+        position: relative;
+        width:70vw;
         margin: 0 auto;
+        display: block;
+    }
+
+    .nav-page-tarif ul{
+        background-color: var(--couleur-arriere-plan);
     }
 }

@@ -1,0 +1,253 @@
+/* conteneur general */
+body {
+    overflow-x: hidden;
+}
+
+main{
+    margin-top: 18vh;
+    background-image: url("../images/fondHoraire.png");
+}
+
+main > h1:first-of-type{
+    margin: 2rem;
+}
+
+/* les lignes de metro permettant l'Affichage de l'état */
+.lesLignesDeMetro{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.lesLignesDeMetro.bas{
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+.ligne {
+    width: 20rem;
+    height: 2rem;
+    transform: translateX(-15em);
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.ligne.verte{
+    background-color: var(--couleur-vert);
+    border-radius: 30px;
+}
+.ligne.bleu{
+    background-color: var(--couleur-bleu-fonce);
+    border-radius: 30px;
+}
+.ligne.orange{
+    background-color: var(--couleur-orange);
+    border-radius: 30px;
+}
+.ligne.jaune{
+    background-color: var(--couleur-jaune);
+    border-radius: 30px;
+}
+
+.ligne > span {
+    position: relative;
+    right: -2rem;
+    display: block;
+    width: 1.7em;
+    height: 1.7em;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    z-index: 2;
+}
+.ligne > img {
+    position: relative;
+    right: -4rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.problemeHaut{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40vw;
+    height: 20vh;
+    background-color: var(--couleur-vert);
+    color: white;
+    border-radius: 40px;
+    padding: 10px;
+    top: 240px;
+    left: 200px;
+    font-size: 18pt;
+}
+
+.problemeBas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 40vw;
+    height: 20vh;
+    background-color: var(--couleur-bleu-fonce);
+    color: white;
+    border-radius: 40px;
+    padding: 10px;
+    top: -100px;
+    left: 500px;
+    font-size: 18pt;
+}
+
+.lesBus{
+    margin: 50px 0px 0px 13vw;
+    display: flex;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* etat des bus */
+main > div.bus{
+    margin-top: 2vh;
+}
+
+
+.lesBus > div{
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ligneBleuSeparatrice{
+    background-image: url("../images/reseauJourBus.png");
+    width: 100vw;
+    height: 30vh;
+    background-size: 110%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.ligneBleuSeparatriceBas{
+    background-image: url("../images/reseauNuitBus.png");
+    width: 100vw;
+    height: 30vh;
+    background-size: 110vw;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.titreReseau{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 535px;
+    margin-left: 7vh;
+    z-index: 2;
+    color: white;
+}
+
+.titreReseau > img, .titreReseauNuit > img{
+    width: 24px;
+    height: 24px;
+}
+.titreReseauNuit{
+    display: flex;
+    position: absolute;
+    top: 2500px;
+    align-items: center;
+    margin-top: 3.5vh;
+    margin-left: 7vh;
+    z-index: 2;
+    color: white;
+}
+
+main > h1:last-of-type{
+    padding: 50px 0 0 25px;
+}
+
+.problemeBus{
+    position: relative;
+    border: 1px solid red;
+    border-radius: 10px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+}
+.problemeBus:nth-of-type(1) > img{
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+.problemeBus.deux > img{
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+}
+.problemeBus:hover > img{
+    opacity: 1;
+}
+
+/* ---------------------------Ecran plus grand que 1000px----------------------------*/
+@media screen and (min-width: 1000px) {
+    /* ligne decoratrice*/
+    .ligneBleuSeparatrice, .ligneBleuSeparatriceBas{
+        width: 100vw;
+        background-position: center;
+        background-size: 110%  100%;
+    }
+
+    /*probleme sur les lignes de metro */
+    .problemeHaut{
+        height: 50px;
+        top: 280px;
+    }
+    .problemeBas{
+        height: 50px;
+        top: -10px;
+    }
+
+    /* bus */
+    .titreReseau{
+        font-size: 30pt;
+        top: 580px;
+        margin-left: 18vw;
+    }
+    .titreReseauNuit{
+        margin-left: 18vw;
+        font-size: 30pt;
+        top: 1695px;
+    }
+    .titreReseau > img, .titreReseauNuit > img{
+        width: 45px;
+        height: 45px;
+        padding-left: 5px;
+    }
+
+    .lesBus{
+        width: 60vw;
+        margin-left: 19vw;
+    }
+
+    .lesBus > div{
+        height: 60px;
+        width: 60px;
+    }
+
+    main > div.bus{
+        margin-top: 1vh;
+        font-size: 18pt;
+    }
+}

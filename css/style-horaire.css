@@ -1,0 +1,250 @@
+body {
+    overflow-x: hidden;
+}
+
+main{
+    margin-top: 10vh;
+    margin-bottom: 18vh;
+    background-image: url("../images/fondHoraire.png");
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size: 200vw;
+    overflow-x: hidden;
+}
+
+
+/* ------------------------Style pour les ligne bleu separatrice------------------------------------- */
+
+/*Ligne Bleu haut*/
+main > div:first-of-type{
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--couleur-bleu-pale);
+    clip-path: polygon(0% 30%, 50% 30%, 90% 90%, 100% 90%, 100% 94%, 90% 94%, 50% 34%, 0% 34%);
+    /* background-image: url("../images/ligneHoraireHaut.png"); */
+    background-size: 110vw 40vh;
+    background-position: center;
+}
+
+/*Ligne bleu Bas*/
+main > div:nth-of-type(3) {
+    width: 100vw;
+    height: 30vh;
+    background-image: url("../images/ligneHoraireBas.png");
+    /* background-size: 110vw 30vh; */
+    background-size: 110%;
+    background-position: center;
+    background-repeat: no-repeat;
+} 
+
+main h1:first-of-type{
+    position: absolute;
+    left: 20%;
+    top: 18%;
+}
+
+main h1:last-of-type{
+    position: absolute;
+    top: 80%;
+    left: 20%;
+}
+/*---------------------------Style pour les lignes de metro interactibles----------------------------------*/
+.lesLignesDeMetro{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.ligne {
+    width: 20rem;
+    height: 2rem;
+    transform: translateX(-15em);
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    cursor: pointer;
+}
+
+/* .ligne:hover{
+    transform: translateX(-10em);
+    cursor: pointer;
+} */
+
+.ligne.verte{
+    background-color: var(--couleur-vert);
+    border-radius: 30px;
+}
+.ligne.bleu{
+    background-color: var(--couleur-bleu-fonce);
+    border-radius: 30px;
+}
+.ligne.orange{
+    background-color: var(--couleur-orange);
+    border-radius: 30px;
+}
+.ligne.jaune{
+    background-color: var(--couleur-jaune);
+    border-radius: 30px;
+}
+
+.ligne > span {
+    display: block;
+    width: 1.7em;
+    height: 1.7em;
+    background-color: white;
+    border-radius: 50%;
+    border: 1px solid black;
+    margin-right: 0.5em;
+    z-index: 2;
+}
+h2{
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* ------------------------Style pour les stations des ligne de metro---------------------------------- */
+
+.lesStations.ligneorange{
+    display: none;
+    position: relative;
+    left: 14rem;
+}
+.lesStations.ligneverte{
+    display: none;
+    position: relative;
+    left: 12rem;
+}
+.lesStations > div {
+    position: relative;
+}
+.lesStations > div > img {
+    position: absolute;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 10;
+    transform-origin: top left;
+    transform: scale(0.5);
+    transition: opacity 0.2s ease;
+}
+.lesStations > div:hover{
+    color: var(--couleur-jaune);
+}
+.lesStations > div:hover > img{
+    opacity: 1;
+}
+
+/* ---------------------Recherche de station----------------------- */
+
+#recherche{
+    padding-left: 5%;
+    height: 20%;
+    width: 60%;
+    border: 2px solid black;
+    border-radius: 40px;
+    font-size: 12pt;
+}
+.rechercheBus{
+    position: absolute;
+    top: 90%;
+    left: 20%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 300px;
+    width: 80%;
+}
+.lesLogosBus{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: 15%;
+    justify-content: space-evenly;
+}
+.lesLogosBus > img{
+    width: 50px;
+    height: 50px;
+}
+
+.lesBusRecherche{
+    position: absolute;
+    display: none;
+    overflow-y: scroll;
+    height: 150px;
+    width: 60vw;
+    margin-left: 15vw;
+}
+
+.lesBusRecherche > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5px 0px;
+}
+.lesBusRecherche img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+/* ----------------------Styles css pour les grands ecrant (100px et +)---------------------------- */
+
+@media screen and (min-width: 1000px) {
+    .MenuBurger{
+        display: none;
+    }
+
+    main{
+        background-size: cover;
+        height: 150vh;
+    }
+
+    .rechercheBus{
+        top: 1050px;
+    }
+    .lesBusRecherche{
+        height: 250px;
+        width: 45vw;
+        left: 5.5vw;
+        position: absolute;
+        top: 1150px;
+    }
+    .lesLogosBus img{
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .lesLogosBus {
+        flex-direction: row;
+        margin-left: 10px;
+        width: 50%;
+    }
+
+    /*Style pour les lignes separatrices*/
+    main > div:first-of-type{
+        height: 50vh;
+        clip-path: polygon(0% 30%, 50% 30%, 90% 90%, 100% 90%, 100% 100%, 90% 100%, 50% 40%, 0% 40%);
+    }
+    main > div:nth-of-type(3){
+        height: 50vh;
+    }
+
+    #recherche{
+        height: 15%;
+        width: 70%;
+    }
+
+    main h1:last-of-type{
+        top: 910px;
+    }
+
+    nav ul{
+        position: static;
+        transform: translate(0);
+        flex-direction: row;
+        height: 100%;
+        width: 100%;
+        background-color: var(--couleur-nav);
+        justify-content: space-between;
+    }
+}
